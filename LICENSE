@@ -1,3 +1,9 @@
+Some files are taken from the LunarG Vulkan SDK. The paths within the SDK
+installation folder are preserved in this repo.
+See https://vulkan.lunarg.com/license/ for licenses for the corresponding files.
+
+Files original to this repository (.bazel files) are subject to the license below.
+
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/

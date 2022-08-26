@@ -1,0 +1,5 @@
+cc_import(
+    name = "macos_libmoltenvk_dylib",
+    shared_library = "sdk/mac/MoltenVK/dylib/macOS/libMoltenVK.dylib",
+    visibility = ["//visibility:public"],
+)
