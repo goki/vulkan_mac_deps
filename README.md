@@ -15,7 +15,7 @@ vulkan_mac_deps_version = "1.3.239.0"
 
 http_archive(
     name = "com_github_goki_vulkan_mac_deps",
-    sha256 = "TODO",
+    sha256 = "348bc84c0fc1f1e79fb28bcf83454faa2a84c4d4c2286225d4413830a3c0a29c",
     strip_prefix = "vulkan_mac_deps-%s" % vulkan_mac_deps_version,
     url = "https://github.com/goki/vulkan_mac_deps/archive/refs/tags/%s.tar.gz" % vulkan_mac_deps_version,
 )
