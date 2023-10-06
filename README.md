@@ -2,7 +2,9 @@
 
 Exists to host the dependencies needed to build Vulkan programs.
 This lets [Bazel](https://bazel.build) build and run programs without
-relying on the system having the Vulkan SDK installed.
+relying on the system having the Vulkan SDK installed. Also, it is used
+by `goki setup` to download the `.framework` needed for building Vulkan
+apps for iOS.
 
 ## Example usage
 
