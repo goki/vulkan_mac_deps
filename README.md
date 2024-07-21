@@ -1,6 +1,13 @@
 # Vulkan dependencies
 
 Exists to host the dependencies needed to build Vulkan programs.
+
+see `sdk/ios` and `sdk/macOS` for further info
+
+# Old Bazel info:
+
+We are not using this anymore, but it might be useful to someone:
+
 This lets [Bazel](https://bazel.build) build and run programs without
 relying on the system having the Vulkan SDK installed. Also, it is used
 by `goki setup` to download the `.framework` needed for building Vulkan

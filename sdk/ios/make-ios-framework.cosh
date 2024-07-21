@@ -1,0 +1,32 @@
+#!/usr/bin/env cosh
+
+// This cosh (cogent core shell) script has the commands to make the `MoltenVK.framework`
+// starting from libMoltenVK.dylib
+
+// note: not currently working
+// curl -O "https://github.com/KhronosGroup/MoltenVK/releases/latest/download/MoltenVK-ios.tar"
+
+// above unpacks into MoltenVK, move to "sdk" to avoid name conflict
+
+[/bin/mv MoltenVK.framework MoltenVK.framework.prev]
+
+[/bin/mv MoltenVK sdk]
+
+[/bin/cp sdk/MoltenVK/dynamic/MoltenVK.xcframework/ios-arm64/MoltenVK.framework/MoltenVK libMoltenVK.dylib]
+
+install_name_tool -id "@executable_path/MoltenVK.framework/MoltenVK" libMoltenVK.dylib
+
+lipo -create libMoltenVK.dylib -output MoltenVK
+
+mkdir MoltenVK.framework
+
+mv MoltenVK MoltenVK.framework
+
+cp Info.plist MoltenVK.framework/
+// cosh.WriteFile("MoltenVK.framework/Info.plist", plist)
+
+codesign --force --deep --verbose=2 --sign "60B8D28345FFB395C0C8C4DB0629CABDB93D7DBC" MoltenVK.framework
+
+codesign -vvvv MoltenVK.framework
+
+
